@@ -1,0 +1,102 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper: Check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper: Check if user owns this document
+    function isOwner(uid) {
+      return isAuthenticated() && request.auth.uid == uid;
+    }
+
+    // Helper: Check if user is an admin
+    function isAdmin() {
+      return isAuthenticated() &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Helper: Check if field is being modified
+    function fieldChanged(field) {
+      return request.resource.data[field] != resource.data[field];
+    }
+
+    // ===================
+    // USERS COLLECTION
+    // ===================
+    match /users/{uid} {
+      // Users can read their own profile, admins can read all
+      allow read: if isOwner(uid) || isAdmin();
+
+      // Users can create their own profile on signup
+      allow create: if isOwner(uid) &&
+        // Required fields
+        request.resource.data.keys().hasAll(['email', 'createdAt']) &&
+        // Prevent self-granting privileges
+        request.resource.data.depositPaid == false &&
+        request.resource.data.trialStatus == 'pending' &&
+        request.resource.data.launchAccessEnabled == false;
+
+      // Users can update their own non-sensitive fields
+      allow update: if isOwner(uid) &&
+        // Cannot modify protected fields
+        !fieldChanged('depositPaid') &&
+        !fieldChanged('trialStatus') &&
+        !fieldChanged('trialStartDate') &&
+        !fieldChanged('founderStatus') &&
+        !fieldChanged('founderCohort') &&
+        !fieldChanged('launchAccessEnabled');
+
+      // Only admins can update sensitive fields (deposit verification, trial status)
+      allow update: if isAdmin();
+
+      // No user deletion (soft delete via status field if needed)
+      allow delete: if false;
+    }
+
+    // ===================
+    // ADMINS COLLECTION
+    // ===================
+    match /admins/{uid} {
+      // Admins can read their own admin status
+      allow read: if isOwner(uid);
+
+      // No one can write to admins collection via client
+      // (manage via Firebase Console or Cloud Functions)
+      allow write: if false;
+    }
+
+    // ===================
+    // FOUNDERS COLLECTION (optional: for cohort tracking)
+    // ===================
+    match /founders/{founderId} {
+      // Authenticated users can read founder spots status
+      allow read: if isAuthenticated();
+
+      // Only admins can manage founder records
+      allow write: if isAdmin();
+    }
+
+    // ===================
+    // PAYMENTS COLLECTION (Stripe webhook records)
+    // ===================
+    match /payments/{paymentId} {
+      // Users can read their own payments, admins can read all
+      allow read: if isAuthenticated() &&
+        (resource.data.userId == request.auth.uid || isAdmin());
+
+      // No client writes - managed by Stripe webhooks (Cloud Functions)
+      allow write: if false;
+    }
+
+    // ===================
+    // DEFAULT: Deny all other access
+    // ===================
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
