@@ -17,7 +17,7 @@ export const StripeGuide: React.FC<StripeGuideProps> = ({ onNext }) => {
         <section className="bg-[#363020]/80 border border-[#4c934c]/30 rounded-2xl overflow-hidden">
           <div className="bg-[#021cfd] px-6 py-3 font-bold text-sm tracking-widest uppercase text-white">Step 1: Create the Product</div>
           <div className="p-8 space-y-4">
-            <p className="text-white">Go to your Stripe Dashboard > Products > <span className="text-[#91cb3e] font-mono">Add Product</span>.</p>
+            <p className="text-white">Go to your Stripe Dashboard &gt; Products &gt; <span className="text-[#91cb3e] font-mono">Add Product</span>.</p>
             <ul className="list-disc list-inside space-y-2 text-[#6e7e85]">
               <li><span className="text-white font-bold">Name:</span> $99.99 Founder Access Deposit</li>
               <li><span className="text-white font-bold">Description:</span> Fully refundable commitment to the LeadSig CRM Founders Cohort.</li>
