@@ -1,39 +1,19 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { LandingPage } from './components/LandingPage';
-import { StripeGuide } from './components/StripeGuide';
-import { FirebaseGuide } from './components/FirebaseGuide';
-import { DeploymentGuide } from './components/DeploymentGuide';
-import { AdminDashboard } from './components/AdminDashboard';
-import { Header } from './components/Header';
-
-export type AppView = 'landing' | 'stripe' | 'firebase' | 'deployment' | 'admin';
 
 const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<AppView>('landing');
+  // Payment link - replace with your actual Stripe payment link
+  const paymentLink = "https://buy.stripe.com/test_yourpaymentlink";
 
-  const renderView = () => {
-    switch (currentView) {
-      case 'landing':
-        return <LandingPage onCtaClick={() => setCurrentView('stripe')} />;
-      case 'stripe':
-        return <StripeGuide onNext={() => setCurrentView('firebase')} />;
-      case 'firebase':
-        return <FirebaseGuide onNext={() => setCurrentView('deployment')} />;
-      case 'deployment':
-        return <DeploymentGuide onNext={() => setCurrentView('admin')} />;
-      case 'admin':
-        return <AdminDashboard />;
-      default:
-        return <LandingPage onCtaClick={() => setCurrentView('stripe')} />;
-    }
+  const handleCtaClick = () => {
+    window.open(paymentLink, '_blank');
   };
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header currentView={currentView} setView={setCurrentView} />
       <main className="flex-grow">
-        {renderView()}
+        <LandingPage onCtaClick={handleCtaClick} />
       </main>
       <footer className="bg-[#363020] border-t border-[#4c934c]/30 py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
