@@ -25,21 +25,21 @@ export const AdminDashboard: React.FC = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-16 px-6">
+    <div className="max-w-6xl mx-auto py-16 px-6 bg-[#363020]">
       <div className="mb-12 flex justify-between items-end">
         <div>
-          <h2 className="text-4xl font-black mb-2">Cohort 001 Management</h2>
-          <p className="text-slate-400">Manual verification portal for LeadSig Founders.</p>
+          <h2 className="text-4xl font-black mb-2 text-white">Cohort 001 Management</h2>
+          <p className="text-[#6e7e85]">Manual verification portal for LeadSig Founders.</p>
         </div>
-        <div className="bg-indigo-500/10 border border-indigo-500/30 px-6 py-4 rounded-xl text-center">
-          <div className="text-3xl font-black text-indigo-400">{founders.filter(f => f.depositStatus === 'Paid').length} / 100</div>
-          <div className="text-xs uppercase tracking-widest font-bold text-indigo-500">Spots Claimed</div>
+        <div className="bg-[#4c934c]/10 border border-[#4c934c]/30 px-6 py-4 rounded-xl text-center">
+          <div className="text-3xl font-black text-[#91cb3e]">{founders.filter(f => f.depositStatus === 'Paid').length} / 100</div>
+          <div className="text-xs uppercase tracking-widest font-bold text-[#4c934c]">Spots Claimed</div>
         </div>
       </div>
 
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+      <div className="bg-[#363020]/80 border border-[#4c934c]/30 rounded-2xl overflow-hidden">
         <table className="w-full text-left">
-          <thead className="bg-slate-800/50 border-b border-slate-700 text-xs uppercase tracking-widest font-bold text-slate-400">
+          <thead className="bg-[#363020] border-b border-[#4c934c]/30 text-xs uppercase tracking-widest font-bold text-[#6e7e85]">
             <tr>
               <th className="px-6 py-4">Founder Name</th>
               <th className="px-6 py-4">Email Address</th>
@@ -48,37 +48,37 @@ export const AdminDashboard: React.FC = () => {
               <th className="px-6 py-4 text-right">Actions</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-800">
+          <tbody className="divide-y divide-[#4c934c]/20">
             {founders.map((founder) => (
-              <tr key={founder.id} className="hover:bg-slate-800/20 transition-colors">
-                <td className="px-6 py-6 font-bold">{founder.name}</td>
-                <td className="px-6 py-6 text-slate-400">{founder.email}</td>
+              <tr key={founder.id} className="hover:bg-[#4c934c]/10 transition-colors">
+                <td className="px-6 py-6 font-bold text-white">{founder.name}</td>
+                <td className="px-6 py-6 text-[#6e7e85]">{founder.email}</td>
                 <td className="px-6 py-6">
                   <span className={`px-2 py-1 rounded text-xs font-bold ${
-                    founder.depositStatus === 'Paid' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
+                    founder.depositStatus === 'Paid' ? 'bg-[#91cb3e]/10 text-[#91cb3e] border border-[#91cb3e]/20' : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
                   }`}>
                     {founder.depositStatus}
                   </span>
                 </td>
                 <td className="px-6 py-6">
                   <span className={`px-2 py-1 rounded text-xs font-bold ${
-                    founder.trialStatus === 'Active' ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20' : 'bg-slate-800 text-slate-500'
+                    founder.trialStatus === 'Active' ? 'bg-[#021cfd]/10 text-[#021cfd] border border-[#021cfd]/20' : 'bg-[#363020] text-[#6e7e85]'
                   }`}>
                     {founder.trialStatus}
                   </span>
                 </td>
                 <td className="px-6 py-6 text-right space-x-3">
                   {founder.depositStatus === 'Pending' && (
-                    <button 
+                    <button
                       onClick={() => toggleVerify(founder.id)}
-                      className="text-xs font-bold text-indigo-400 hover:text-white transition"
+                      className="text-xs font-bold text-[#91cb3e] hover:text-white transition"
                     >
                       Verify Deposit
                     </button>
                   )}
-                  <button 
+                  <button
                     onClick={() => toggleTrial(founder.id)}
-                    className="text-xs font-bold text-slate-400 hover:text-white transition"
+                    className="text-xs font-bold text-[#6e7e85] hover:text-white transition"
                   >
                     {founder.trialStatus === 'Active' ? 'Stop Trial' : 'Start Trial'}
                   </button>
@@ -88,16 +88,16 @@ export const AdminDashboard: React.FC = () => {
           </tbody>
         </table>
         {founders.length === 0 && (
-          <div className="py-24 text-center text-slate-500 italic">No founders registered yet.</div>
+          <div className="py-24 text-center text-[#6e7e85] italic">No founders registered yet.</div>
         )}
       </div>
 
-      <div className="mt-12 p-8 bg-indigo-600 rounded-2xl flex items-center justify-between text-white">
+      <div className="mt-12 p-8 bg-[#4c934c] rounded-2xl flex items-center justify-between text-white">
         <div>
           <h4 className="text-xl font-bold mb-1">Ready to scale Cohort 002?</h4>
-          <p className="text-indigo-100 text-sm opacity-80">Transition to fully automated Stripe Webhooks when cohort reaches capacity.</p>
+          <p className="text-white/80 text-sm">Transition to fully automated Stripe Webhooks when cohort reaches capacity.</p>
         </div>
-        <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold shadow-xl">Setup Webhooks</button>
+        <button className="bg-[#021cfd] text-white px-6 py-3 rounded-lg font-bold shadow-xl hover:bg-[#0118cc]">Setup Webhooks</button>
       </div>
     </div>
   );

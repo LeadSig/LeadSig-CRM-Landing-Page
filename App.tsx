@@ -35,14 +35,14 @@ const App: React.FC = () => {
       <main className="flex-grow">
         {renderView()}
       </main>
-      <footer className="bg-slate-900 border-t border-slate-800 py-12 px-6">
+      <footer className="bg-[#363020] border-t border-[#4c934c]/30 py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-xl font-bold tracking-tighter text-indigo-400">LEADSIG CRM</div>
-          <p className="text-slate-400 text-sm">© 2024 LeadSig. Founders Lifetime Deal (Cohort 001)</p>
-          <div className="flex gap-6 text-sm text-slate-500">
-            <a href="#" className="hover:text-white transition">Privacy</a>
-            <a href="#" className="hover:text-white transition">Terms</a>
-            <a href="#" className="hover:text-white transition">Contact</a>
+          <div className="text-xl font-bold tracking-tighter text-[#021cfd]">LEADSIG <span className="text-white">CRM</span></div>
+          <p className="text-[#6e7e85] text-sm">© 2024 LeadSig. Founders Lifetime Deal (Cohort 001)</p>
+          <div className="flex gap-6 text-sm text-[#6e7e85]">
+            <a href="#" className="hover:text-[#91cb3e] transition">Privacy</a>
+            <a href="#" className="hover:text-[#91cb3e] transition">Terms</a>
+            <a href="#" className="hover:text-[#91cb3e] transition">Contact</a>
           </div>
         </div>
       </footer>
