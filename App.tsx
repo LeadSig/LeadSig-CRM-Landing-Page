@@ -3,8 +3,8 @@ import React from 'react';
 import { LandingPage } from './components/LandingPage';
 
 const App: React.FC = () => {
-  // Payment link - replace with your actual Stripe payment link
-  const paymentLink = "https://buy.stripe.com/test_yourpaymentlink";
+  // Stripe payment link for Founder Access
+  const paymentLink = "https://buy.stripe.com/aFa00icvZ8Ua9zA9FTgjC00";
 
   const handleCtaClick = () => {
     window.open(paymentLink, '_blank');
