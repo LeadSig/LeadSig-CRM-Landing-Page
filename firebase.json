@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "leadsig",
     "public": "dist",
     "ignore": [
       "firebase.json",
