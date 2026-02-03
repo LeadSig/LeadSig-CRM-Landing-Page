@@ -36,12 +36,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
           </div>
           <div className="flex items-center gap-6">
             <a href="tel:333-333-3333" className="hidden md:flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#0790C5] rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#4c934c] rounded-full flex items-center justify-center">
                 <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                 </svg>
               </div>
-              <span className="font-bold text-[#15242F] text-lg underline">333-333-3333</span>
+              <span className="font-bold text-[#363020] text-lg underline">333-333-3333</span>
             </a>
             <button
               onClick={onCtaClick}
@@ -72,7 +72,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
             <div className="space-y-4">
               <button
                 onClick={onCtaClick}
-                className="px-14 py-6 bg-[#8A31FF] text-white font-bold text-xl rounded-lg hover:bg-[#7828e0] transition shadow-lg"
+                className="px-14 py-6 bg-[#4c934c] text-white font-bold text-xl rounded-lg hover:bg-[#3d7a3d] transition shadow-lg"
               >
                 SECURE FOUNDER ACCESS
               </button>
@@ -127,7 +127,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
           <div className="text-center">
             <button
               onClick={onCtaClick}
-              className="px-14 py-6 bg-[#8A31FF] text-white font-bold text-xl rounded-lg hover:bg-[#7828e0] transition"
+              className="px-14 py-6 bg-[#4c934c] text-white font-bold text-xl rounded-lg hover:bg-[#3d7a3d] transition"
             >
               JOIN THE FOUNDERS
             </button>
@@ -148,7 +148,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
           </p>
           <button
             onClick={onCtaClick}
-            className="px-14 py-6 bg-[#8A31FF] text-white font-bold text-xl rounded-lg hover:bg-[#7828e0] transition"
+            className="px-14 py-6 bg-[#4c934c] text-white font-bold text-xl rounded-lg hover:bg-[#3d7a3d] transition"
           >
             SEE THE SOLUTION
           </button>
@@ -174,7 +174,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
             </p>
             <button
               onClick={onCtaClick}
-              className="px-10 py-5 bg-[#8A31FF] text-white font-bold rounded-lg hover:bg-[#7828e0] transition"
+              className="px-10 py-5 bg-[#4c934c] text-white font-bold rounded-lg hover:bg-[#3d7a3d] transition"
             >
               GET STARTED
             </button>
@@ -201,7 +201,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
             </p>
             <button
               onClick={onCtaClick}
-              className="px-10 py-5 bg-[#8A31FF] text-white font-bold rounded-lg hover:bg-[#7828e0] transition"
+              className="px-10 py-5 bg-[#4c934c] text-white font-bold rounded-lg hover:bg-[#3d7a3d] transition"
             >
               GET STARTED
             </button>
@@ -228,7 +228,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
             </p>
             <button
               onClick={onCtaClick}
-              className="px-10 py-5 bg-[#8A31FF] text-white font-bold rounded-lg hover:bg-[#7828e0] transition"
+              className="px-10 py-5 bg-[#4c934c] text-white font-bold rounded-lg hover:bg-[#3d7a3d] transition"
             >
               GET STARTED
             </button>
@@ -246,15 +246,15 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
           <div className="bg-white border-2 border-black p-12 text-center">
             <div className="grid md:grid-cols-3 gap-8">
               <div>
-                <p className="text-5xl font-bold text-[#8A31FF]">40%</p>
+                <p className="text-5xl font-bold text-[#4c934c]">40%</p>
                 <p className="text-lg text-gray-600">Higher Close Rate</p>
               </div>
               <div>
-                <p className="text-5xl font-bold text-[#8A31FF]">10hrs</p>
+                <p className="text-5xl font-bold text-[#4c934c]">10hrs</p>
                 <p className="text-lg text-gray-600">Saved Per Week</p>
               </div>
               <div>
-                <p className="text-5xl font-bold text-[#8A31FF]">3x</p>
+                <p className="text-5xl font-bold text-[#4c934c]">3x</p>
                 <p className="text-lg text-gray-600">More High-Ticket Jobs</p>
               </div>
             </div>
@@ -263,7 +263,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
           <div className="text-center">
             <button
               onClick={onCtaClick}
-              className="px-14 py-6 bg-[#8A31FF] text-white font-bold text-xl rounded-lg hover:bg-[#7828e0] transition"
+              className="px-14 py-6 bg-[#4c934c] text-white font-bold text-xl rounded-lg hover:bg-[#3d7a3d] transition"
             >
               GET THESE RESULTS
             </button>
@@ -297,7 +297,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
           <div className="text-center">
             <button
               onClick={onCtaClick}
-              className="px-14 py-6 bg-[#8A31FF] text-white font-bold text-xl rounded-lg hover:bg-[#7828e0] transition"
+              className="px-14 py-6 bg-[#4c934c] text-white font-bold text-xl rounded-lg hover:bg-[#3d7a3d] transition"
             >
               CLAIM YOUR SPOT
             </button>
@@ -319,7 +319,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
               { step: "3", title: "Close More Deals", desc: "Focus only on high-intent buyers ready to pay premium prices" }
             ].map((item, i) => (
               <div key={i} className="bg-white border-2 border-black p-8 text-center">
-                <div className="w-12 h-12 bg-[#8A31FF] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#4c934c] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
                 <h4 className="text-xl font-bold mb-2">{item.title}</h4>
@@ -331,7 +331,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
           <div className="text-center">
             <button
               onClick={onCtaClick}
-              className="px-14 py-6 bg-[#8A31FF] text-white font-bold text-xl rounded-lg hover:bg-[#7828e0] transition"
+              className="px-14 py-6 bg-[#4c934c] text-white font-bold text-xl rounded-lg hover:bg-[#3d7a3d] transition"
             >
               START NOW
             </button>
@@ -362,7 +362,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
           <div className="text-center">
             <button
               onClick={onCtaClick}
-              className="px-14 py-6 bg-[#8A31FF] text-white font-bold text-xl rounded-lg hover:bg-[#7828e0] transition"
+              className="px-14 py-6 bg-[#4c934c] text-white font-bold text-xl rounded-lg hover:bg-[#3d7a3d] transition"
             >
               JOIN OUR MISSION
             </button>
@@ -389,7 +389,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
           <div className="text-center">
             <button
               onClick={onCtaClick}
-              className="px-14 py-6 bg-[#8A31FF] text-white font-bold text-xl rounded-lg hover:bg-[#7828e0] transition"
+              className="px-14 py-6 bg-[#4c934c] text-white font-bold text-xl rounded-lg hover:bg-[#3d7a3d] transition"
             >
               RESERVE RISK-FREE
             </button>
@@ -409,7 +409,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
       {/* FAQ SECTION */}
       <section className="py-20 px-6 md:px-10 bg-white">
         <div className="max-w-3xl mx-auto space-y-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-[#241B41]">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-[#363020]">
             Frequently Asked Questions
           </h2>
 
@@ -427,7 +427,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
                   onClick={() => toggleFaq(i)}
                   className="w-full py-4 flex justify-between items-center text-left"
                 >
-                  <span className="text-xl font-bold text-[#241B41]">{faq.q}</span>
+                  <span className="text-xl font-bold text-[#363020]">{faq.q}</span>
                   <svg
                     className={`w-4 h-4 transform transition-transform ${openFaq === i ? 'rotate-180' : ''}`}
                     fill="none"
@@ -465,7 +465,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
 
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-[#91cb3e] rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -473,7 +473,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
                 <span className="text-lg text-gray-700">Lifetime access for $499 total (vs $99/month)</span>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-[#91cb3e] rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -481,7 +481,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
                 <span className="text-lg text-gray-700">7-day free trial after launch</span>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-[#91cb3e] rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -493,7 +493,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onCtaClick }) => {
             <div className="space-y-4">
               <button
                 onClick={onCtaClick}
-                className="px-14 py-6 bg-[#8A31FF] text-white font-bold text-xl rounded-lg hover:bg-[#7828e0] transition shadow-lg"
+                className="px-14 py-6 bg-[#4c934c] text-white font-bold text-xl rounded-lg hover:bg-[#3d7a3d] transition shadow-lg"
               >
                 SECURE FOUNDER ACCESS - $99.99
               </button>
